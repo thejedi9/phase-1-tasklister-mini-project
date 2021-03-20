@@ -9,13 +9,12 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 let toDo = document.querySelector("form#create-task-form")
-let list = document.querySelector("#tasks")
+let ulHolder = document.querySelector("#tasks")
 
 toDo.addEventListener("submit", function(){
-  let tasks = document.createElement("li")
-  list.innerText = ""
-  list.append(tasks)
+  let newTasks = document.createElement("li")
+  let entry = document.querySelector("input#new-task-description")
+  newTasks.innerText = entry.value
+  ulHolder.append(newTasks)
 })
-
-
 
